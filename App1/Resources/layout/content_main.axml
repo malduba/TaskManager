@@ -41,15 +41,5 @@
             android:layout_marginTop="10dp"
             android:textColor="#ffead8d8"
             android:id="@+id/showTasks" />
-        <Button
-            android:text="Track Task"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="20dp"
-            android:textSize="20sp"
-            android:background="#ff2e67ae"
-            android:layout_marginTop="10dp"
-            android:textColor="#ffead8d8"
-            android:id="@+id/trackTask" />
     </LinearLayout>
 </RelativeLayout>
