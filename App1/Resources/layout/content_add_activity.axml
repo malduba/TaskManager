@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="App1.AddTaskActivity"
+    tools:showIn="@layout/activity_add_task">
+    <LinearLayout
+        android:orientation="vertical"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1">
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView1"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="5dp">
+            <LinearLayout
+                android:id="@+id/relativeLayout1"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView1"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:id="@+id/taskNameLbl"
+                    android:text="Task Name"
+                    android:layout_width="220dp"
+                    android:layout_height="40dp"
+                    android:padding="8dp"
+                    android:textColor="#ffdfad36"
+                    android:textSize="18dp"
+                    android:fontFamily="sans-serif-medium" />
+                <EditText
+                    android:id="@+id/taskName"
+                    android:layout_width="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:background="#ff5b8cbc"
+                    android:hint="task name"
+                    android:paddingLeft="20dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="15sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/relativeLayout2"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeLayout1"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:id="@+id/textDesc"
+                    android:text="Task Description"
+                    android:layout_width="220dp"
+                    android:layout_height="40dp"
+                    android:padding="8dp"
+                    android:textColor="#ffdfad36"
+                    android:textSize="18dp"
+                    android:fontFamily="sans-serif-medium" />
+                <EditText
+                    android:id="@+id/taskDesc"
+                    android:layout_width="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/imgView_userIcon"
+                    android:background="#ff5b8cbc"
+                    android:hint="task desc"
+                    android:paddingLeft="20dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="15sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/relativeLayout3"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeLayout2"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:id="@+id/textTaskDue"
+                    android:text="Due Date"
+                    android:layout_width="220dp"
+                    android:layout_height="40dp"
+                    android:padding="8dp"
+                    android:textColor="#ffdfad36"
+                    android:textSize="18dp"
+                    android:fontFamily="sans-serif-medium" />
+                <EditText
+                    android:id="@+id/taskDue"
+                    android:layout_width="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:background="#ff5b8cbc"
+                    android:hint="due date"
+                    android:paddingLeft="20dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:focusable="false"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </RelativeLayout>
+        <Button
+            android:id="@+id/btin_addtask"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/relativeLayout2"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/colorPrimary"
+            android:fontFamily="sans-serif-medium"
+            android:text="Add Task"
+            android:textColor="#ffdfad36"
+            android:textSize="20sp" />
+        <Button
+            android:id="@+id/btin_showtasks"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/btin_addtask"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/colorPrimary"
+            android:fontFamily="sans-serif-medium"
+            android:text="Show Main"
+            android:textColor="#ffdfad36"
+            android:textSize="20sp" />
+    </LinearLayout>
+</RelativeLayout>
