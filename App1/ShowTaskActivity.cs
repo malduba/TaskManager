@@ -35,7 +35,7 @@ namespace App1
             List<UserTask> userTasks = JsonConvert.DeserializeObject<List<UserTask>>(Intent.GetStringExtra("userTasks"));
             foreach (UserTask task in userTasks)
             {
-                string input = task.TaskName + "            " + task.TaskDesc + "               " + task.TaskDue;
+                string input = task.TaskName + "\t" + task.TaskDesc + "\t      " + task.TaskDue;
                 items.Add(input);
             }
             ArrayAdapter<string> arrayAdapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, items.ToArray());

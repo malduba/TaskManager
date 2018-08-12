@@ -35,7 +35,6 @@ namespace App1
             userTasks.Add(new UserTask() {TaskName = "1", TaskDesc = "Prepare Course", TaskDue= "10/10/2018" });
             userTasks.Add(new UserTask() { TaskName = "2", TaskDesc = "Review", TaskDue = "20/10/2018" });
             userTasks.Add(new UserTask() { TaskName = "3", TaskDesc = "Attach Files", TaskDue = "5/11/2018" });
-            userTasks.Add(new UserTask() { TaskName = "4", TaskDesc = "Contact Memebers", TaskDue = "2/12/2018" });
 
 
             addTask = (Button)FindViewById(Resource.Id.addTask);

@@ -62,7 +62,7 @@ namespace App1
                     {
                         if(task.TaskName.ToLower().Contains(sText) || task.TaskDesc.ToLower().Contains(sText))
                         {
-                            string input = task.TaskName + "            " + task.TaskDesc + "               " + task.TaskDue;
+                            string input = task.TaskName + "\t" + task.TaskDesc + "\t      " + task.TaskDue;
                             items.Add(input);
                             resCount++;
                         }
