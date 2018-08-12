@@ -14,7 +14,7 @@ namespace App1
 	[Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar")]
 	public class MainActivity : AppCompatActivity, View.IOnClickListener
 	{
-        Button addTask,showTasks; 
+        Button addTask, showTasks, searchTasks;
         List<UserTask> userTasks;
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -29,9 +29,14 @@ namespace App1
             }
             catch(Exception ex)
             {
-                userTasks = null;
+                userTasks = new List<UserTask>();
             }
-            
+
+            userTasks.Add(new UserTask() {TaskName = "1", TaskDesc = "Prepare Course", TaskDue= "10/10/2018" });
+            userTasks.Add(new UserTask() { TaskName = "2", TaskDesc = "Review", TaskDue = "20/10/2018" });
+            userTasks.Add(new UserTask() { TaskName = "3", TaskDesc = "Attach Files", TaskDue = "5/11/2018" });
+            userTasks.Add(new UserTask() { TaskName = "4", TaskDesc = "Contact Memebers", TaskDue = "2/12/2018" });
+
 
             addTask = (Button)FindViewById(Resource.Id.addTask);
             addTask.Tag = 1;
@@ -40,6 +45,10 @@ namespace App1
             showTasks = (Button)FindViewById(Resource.Id.showTasks);
             showTasks.Tag = 2;
             showTasks.SetOnClickListener(this);
+
+            searchTasks = (Button)FindViewById(Resource.Id.searchTasks);
+            searchTasks.Tag = 3;
+            searchTasks.SetOnClickListener(this);
 
             Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
@@ -82,8 +91,30 @@ namespace App1
                 }
             
             }
+            if (Convert.ToUInt32(v.Tag.ToString()) == 3)
+            {
+                if (userTasks != null)
+                {
+                    var showActivity = new Intent(this, typeof(SearchTaskActivity));
+                    if (userTasks.Count > 0)
+                    {
+                        showActivity.PutExtra("userTasks", JsonConvert.SerializeObject(userTasks));
+                        StartActivity(showActivity);
+                    }
+                    else
+                    {
+                        Toast t = Toast.MakeText(v.Context, "Please add tasks", ToastLength.Long);
+                        t.Show();
+                    }
+                }
+                else
+                {
+                    Toast t = Toast.MakeText(v.Context, "Please add tasks", ToastLength.Long);
+                    t.Show();
+                }
 
-           
+            } 
+
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)

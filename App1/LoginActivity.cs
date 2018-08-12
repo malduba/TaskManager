@@ -34,8 +34,8 @@ namespace App1
         }
         public void OnClick(View v)
         {
-            string uname = userNameEditText.Text;
-            string upass = passwordEditText.Text;
+            string uname = "user";// userNameEditText.Text;
+            string upass = "123456";// passwordEditText.Text;
             string umsg = "";
             var activity = new Intent(this, typeof(MainActivity));
             Toast t;
